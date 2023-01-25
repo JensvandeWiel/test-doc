@@ -9,4 +9,4 @@ jobs:
         id: bing
         run: text='cat ${GITHUB_WORKSPACE}/test.md'
       - name: send
-        run: 'curl -d "{"name":"test-doc", "content":"$text"}" -H "Content-Type: application/json" -H "Authorization: Bearer ${AUTH_TOKEN}"  -X POST https://jens.vandewiel.eu/api/document/update/a6a706b6-1de0-4fe2-a7f0-b0e32b540bd3'
+        run: 'curl -d "{"name":"test-doc", "content":"$text"}" -H "Content-Type: application/json" -H "Authorization: Bearer  ${AUTH_TOKEN}"  -X POST https://jens.vandewiel.eu/api/document/update/a6a706b6-1de0-4fe2-a7f0-b0e32b540bd3'
