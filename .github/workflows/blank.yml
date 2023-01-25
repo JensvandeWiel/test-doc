@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: push content
+    steps:
+      - name: push
+        id: bing
+        uses: JensvandeWiel/send-content-to-api@v0.1.0
+        with:
+          url: 'https://jens.vandewiel.eu/api/document/update/a6a706b6-1de0-4fe2-a7f0-b0e32b540bd3'
+          name: 'updated from github'
+          file: '${GITHUB_WORKSPACE}/test.md'
